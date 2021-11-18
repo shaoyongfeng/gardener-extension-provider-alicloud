@@ -41,11 +41,11 @@ func UseEncryptedSystemDisk(volume interface{}) (bool, error) {
 	}
 
 	if v, ok := volume.(*extensionsv1alpha1.Volume); ok {
-		return v.Encrypted != nil && *v.Encrypted, nil
+		return (v.Encrypted == nil || v.Encrypted != nil && *v.Encrypted), nil
 	}
 
 	if v, ok := volume.(*gcorev1beta1.Volume); ok {
-		return v.Encrypted != nil && *v.Encrypted, nil
+		return (v.Encrypted == nil || v.Encrypted != nil && *v.Encrypted), nil
 	}
 
 	return false, fmt.Errorf("type of input volume [%v] is unexpected", volume)

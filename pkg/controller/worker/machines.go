@@ -217,6 +217,7 @@ func computeDisks(namespace string, pool extensionsv1alpha1.WorkerPool) (map[str
 			if vol.Type != nil {
 				dataDisk["category"] = *vol.Type
 			}
+			dataDisk["encrypted"] = true
 			if vol.Encrypted != nil {
 				dataDisk["encrypted"] = *vol.Encrypted
 			}
