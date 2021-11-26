@@ -90,7 +90,7 @@ const (
 
 var (
 	// ChartsPath is the path to the charts
-	ChartsPath = filepath.Join("charts")
+	ChartsPath = filepath.Join("/Users/i058544/go/src/github.com/gardener/gardener-extension-provider-alicloud/charts")
 	// InternalChartsPath is the path to the internal charts
 	InternalChartsPath = filepath.Join(ChartsPath, "internal")
 	// InfraChartPath is the path to the alicloud-infra chart.

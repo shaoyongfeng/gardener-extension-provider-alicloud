@@ -19,7 +19,6 @@ import (
 	backupentrycontroller "github.com/gardener/gardener-extension-provider-alicloud/pkg/controller/backupentry"
 	controlplanecontroller "github.com/gardener/gardener-extension-provider-alicloud/pkg/controller/controlplane"
 	dnsrecordcontroller "github.com/gardener/gardener-extension-provider-alicloud/pkg/controller/dnsrecord"
-	healthcheckcontroller "github.com/gardener/gardener-extension-provider-alicloud/pkg/controller/healthcheck"
 	infrastructurecontroller "github.com/gardener/gardener-extension-provider-alicloud/pkg/controller/infrastructure"
 	workercontroller "github.com/gardener/gardener-extension-provider-alicloud/pkg/controller/worker"
 	controlplanewebhook "github.com/gardener/gardener-extension-provider-alicloud/pkg/webhook/controlplane"
@@ -31,7 +30,6 @@ import (
 	controllercmd "github.com/gardener/gardener/extensions/pkg/controller/cmd"
 	extensionscontrolplanecontroller "github.com/gardener/gardener/extensions/pkg/controller/controlplane"
 	extensionsdnsrecordcontroller "github.com/gardener/gardener/extensions/pkg/controller/dnsrecord"
-	extensionshealthcheckcontroller "github.com/gardener/gardener/extensions/pkg/controller/healthcheck"
 	extensionsinfrastructurecontroller "github.com/gardener/gardener/extensions/pkg/controller/infrastructure"
 	extensionsworkercontroller "github.com/gardener/gardener/extensions/pkg/controller/worker"
 	webhookcmd "github.com/gardener/gardener/extensions/pkg/webhook/cmd"
@@ -48,7 +46,7 @@ func ControllerSwitchOptions() *controllercmd.SwitchOptions {
 		controllercmd.Switch(extensionsdnsrecordcontroller.ControllerName, dnsrecordcontroller.AddToManager),
 		controllercmd.Switch(extensionsinfrastructurecontroller.ControllerName, infrastructurecontroller.AddToManager),
 		controllercmd.Switch(extensionsworkercontroller.ControllerName, workercontroller.AddToManager),
-		controllercmd.Switch(extensionshealthcheckcontroller.ControllerName, healthcheckcontroller.AddToManager),
+		//controllercmd.Switch(extensionshealthcheckcontroller.ControllerName, healthcheckcontroller.AddToManager),
 	)
 }
 

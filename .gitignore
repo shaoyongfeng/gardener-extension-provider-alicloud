@@ -21,3 +21,5 @@ TODO
 # GitGuardian
 .cache_ggshield
 .gitguardian.yaml
+
+*.swp
