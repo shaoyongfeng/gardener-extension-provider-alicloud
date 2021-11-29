@@ -15,8 +15,8 @@
 EXTENSION_PREFIX            := gardener-extension
 NAME                        := provider-alicloud
 ADMISSION_NAME              := admission-alicloud
-REGISTRY                    := eu.gcr.io/gardener-project/gardener
-IMAGE_PREFIX                := $(REGISTRY)/extensions
+REGISTRY                    := registry.cn-shanghai.aliyuncs.com
+IMAGE_PREFIX                := $(REGISTRY)/gardener-dev
 REPO_ROOT                   := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 HACK_DIR                    := $(REPO_ROOT)/hack
 VERSION                     := $(shell cat "$(REPO_ROOT)/VERSION")
